@@ -7,6 +7,9 @@ async function getUsers(){
 getUsers()
 .then(data => {
     data.message.forEach(user => {
-        console.log(user.alias);
+      let p = document.createElement("p");
+        p.innerText = user.alias;
+
+        document.body.append(p);
     });
 })
